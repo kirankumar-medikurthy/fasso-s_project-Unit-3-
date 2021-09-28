@@ -1,8 +1,21 @@
 const express = require('express');
 
+const connect = require("./configs/db");
+
 const app = express();
 
-const connect = require("./configs/db")
+app.use(express.json());
+
+const fooditemController = require("./controllers/fooditem.controller");
+
+const categoryItemController = require("./controllers/category.controller");
+
+
+app.use("/fooditems", fooditemController);
+
+app.use("/categorys", categoryItemController);
+
+
 
 
 app.listen(7878, async() => {
