@@ -1,0 +1,27 @@
+{
+  "name": "fassos-project",
+  "version": "1.0.0",
+  "description": "Designing the fasso's website with the help on html ,css, Javascript along with backend api's",
+  "main": "index.js",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "mongoose": "^6.0.8"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kirankumar-medikurthy/fasso-s_project-Unit-3-.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kirankumar-medikurthy/fasso-s_project-Unit-3-/issues"
+  },
+  "homepage": "https://github.com/kirankumar-medikurthy/fasso-s_project-Unit-3-#readme"
+}

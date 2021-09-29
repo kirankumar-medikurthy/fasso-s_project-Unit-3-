@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bar.css">
+    <link rel="stylesheet" href="css/userSection.css">
+    <link rel="stylesheet" href="css/profile.css">
+</head>
+
+<body>
+    <%- include ("partials/navbar.partials.ejs") %>
+    <!-------------------login section details---------------------->
+    <%- include ("partials/loginSection.partials.ejs") %>
+    <!-------------------Link section details bar---------------------->
+    <%- include ("partials/link.partials.ejs") %>
+    <!-------------------Manage Profile---------------------->
+    <div id="showBar">
+        <div id="profilebox">
+            <h3 id="Mprofile">Manage Profile</h3>
+            <div id="profileLogo">
+                <img src="../images/logoicon.svg" />
+            </div>
+            <div id="userDetail">
+                <p id="userBoxp">Title</p>
+                <div id="userBox"><h3>shihab shaikh</h3></div>
+                <p id="userBoxp">Phone No.</p>
+                <div id="userBox1"><h3>9714689861</h3></div>
+                <p id="userBoxp">Email</p>
+                <div id="userBox2"><h3>shihabshaikh96@gmail.com</h3></div>
+            </div>
+        </div>
+    </div>
+     <!-------------------Footer Area---------------------->
+    <%- include ("partials/footer.partials.ejs") %>
+</body>
+</html>
