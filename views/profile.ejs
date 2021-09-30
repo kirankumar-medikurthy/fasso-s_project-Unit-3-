@@ -12,9 +12,73 @@
 </head>
 
 <body>
-    <%- include ("partials/navbar.partials.ejs") %>
+<!-------------------=TOP NAV BAR---------------------->
+<nav>
+    <div id="navContainer">
+        <div id="navLeft">
+            <a href="./Collections.html">
+                <img src="../images/top-navbar-logo.svg" alt="faasos logo" />
+            </a>
+            <div id="navLocation">
+                <p>Mumbai</p>
+                <p>Mumbai Maharashtra</p>
+            </div>
+        </div>
+        <div id="navRight">
+            <div id="userName">
+                <li id="login" style="background-color: white;">Hi <%= name %> </li>
+            </div>
+            <!-------------------Side NAV BAR---------------------->
+            <nav role='navigation'>
+                <div id="menuToggle">
+                    <input type="checkbox" />
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <ul id="menu">
+                        <a href="./Profile">
+                            <div id="userNameinside">
+                                <li id="logininside" style="background-color: white;">Hi <%= name %>
+                                </li>
+                            </div>
+                            <li><img src="../images/sidebarProfile.svg" id="sidebarImg">Profile</li>
+                            <a href="./Orders">
+                                <li><img src="../images/sidebarLogout.svg" id="sidebarImg">Manage Orders</li>
+                            </a>
+                            <a href="./Address">
+                                <li><img src="../images/sidebarAddress.svg" id="sidebarImg">Manage Address</li>
+                            </a>
+                            <a href="./Payments">
+                                <li><img src="../images/sidebarPayment.svg" id="sidebarImg">Manage Payments</li>
+                            </a>
+                            <a href="#">
+                                <li><img src="../images/sidebarHelp.svg" id="sidebarImg">Help & Supports</li>
+                            </a>
+                            <a href="#">
+                                <li><img src="../images/sidebarAbout.svg" id="sidebarImg">Aboust Us</li>
+                            </a>
+                            <a href="#">
+                                <li><img src="../images/sidebarParty.svg" id="sidebarImg">Party Order</li>
+                            </a>
+                            <a href="./logout">
+                                <li><img src="../images/sidebarLogout.svg" id="sidebarImg">Log Out</li>
+                            </a>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+</nav>
     <!-------------------login section details---------------------->
-    <%- include ("partials/loginSection.partials.ejs") %>
+<div id="mainhead">
+    <div id="logoBox">
+        <img class="logo" src="../images/logoicon.svg" />
+    </div>
+    <div id="theNames">
+        <h3 id="theName"><%= name %></h3>
+        <p id="theNumber"><%= mobile %></p>
+        <p id="theEmail"><%= email %></p>
+    </div>
+</div>
     <!-------------------Link section details bar---------------------->
     <%- include ("partials/link.partials.ejs") %>
     <!-------------------Manage Profile---------------------->

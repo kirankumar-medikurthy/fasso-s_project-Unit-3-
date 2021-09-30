@@ -4,6 +4,7 @@
   "description": "Designing the fasso's website with the help on html ,css, Javascript along with backend api's",
   "main": "index.js",
   "dependencies": {
+    "connect-flash": "^0.1.1",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
     "express-session": "^1.17.2",

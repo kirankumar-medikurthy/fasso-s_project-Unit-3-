@@ -2,11 +2,12 @@ const express = require('express');
 const app =express();
 const path = require("path");
 const session = require("express-session");
+const flash = require('connect-flash');
 
 const connect = require("../configs/db");
 const Signup = require("../models/signup.model");
 
-
+app.use(flash());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(session({
@@ -96,12 +97,13 @@ app.get("/payment", async (req, res) => {
 
 
 app.get("/signup", (req, res) => {
-	res.render("signup");
+	res.render("signup",{message:req.flash('message')});
 })
 
 app.post("/signup", async (req, res) => {
 	const registered = await Signup.create(req.body);
 	setTimeout(() => {
+	req.flash('message',"Signed up Successfully!...")
 	res.render("index");	
 	},1000)
 
@@ -121,10 +123,24 @@ app.post("/login", async (req, res) => {
 			req.session.user = user
 			res.redirect("/collections");
 		}
-
+		else {
+			req.flash('message', "Invalid User")
+			res.redirect('index');
+		}
 	} catch (error) {
 		res.status(400).send("Not matched");
 	}
 })
 
-
+app.get("/logout",  (req, res) => {
+	req.session.destroy((err) => {
+		if (err) {
+			console.log(err)
+		}
+		else {
+			setTimeout(() => {
+			res.redirect("/index");
+			},2000)
+		}
+	})
+})
