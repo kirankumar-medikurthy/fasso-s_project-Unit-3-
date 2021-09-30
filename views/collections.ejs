@@ -1,0 +1,82 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bar.css">
+    <link rel="stylesheet" href="css/collections.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <%- include ("partials/navbar.partials.ejs") %>
+        <%- include ("partials/slider.patials.ejs") %>
+
+            <!-- search bar 2-->
+
+            <div class="modal_wraper">
+                <div class="modal_container">
+                    <!-- button 1 -->
+                    <button class="close">&times;</button>
+                    <input type="text" id="sear" value="" class="sear1" placeholder="Search for Dishes">
+                </div>
+            </div>
+
+          <!-- search bar and radio button-->  
+            <div id="main-container" class="container">
+                <div id="mainContentHeading">
+                    <h1 class="heading">
+                        Order Food Online in <span id="headingLocation">Fort
+                        </span>
+                    </h1>
+                    <div class="filterbutton">
+                        <button id="triger">
+                            <img src="../images/searchIcon.svg" alt="" />
+                            <span style="background-color: white;">Search for wraps</span>
+                        </button>
+                        <button>
+                            <input type="radio" name="veg_nonVeg" value="nonVeg" id="nonVeg" onclick="handleNonVeg()" />
+                            <label for="nonVeg" style="background-color: white;">Non-Veg Only</label>
+                        </button>
+                        <button>
+                            <input type="radio" name="veg_nonVeg" value="veg" id="veg" onclick="handleVeg()" />
+                            <label for="veg" style="background-color: white;">Veg Only</label>
+                        </button>
+                    </div>
+                </div>
+                <hr />
+                <!-- Product fielter area-->
+                <div id="mainProducts">
+                    <div id="productCategory">
+                        <ul id="Combo-category">
+                            <li id="1">Daily Value Wrap Combos (Save Upto 40% Extra)</li>
+                            <li id="2">Combos for 1 (Save upto 15% Extra)</li>
+                            <li id="3">Combos for 2 (Save upto 20% Extra)</li>
+                            <li id="4">Combos for 4 (Save upto 25% Extra)</li>
+                            <li id="5">Limited Period Collection</li>
+                            <li id="6">Signature Wraps</li>
+                            <li id="7">Classic Wraps</li>
+                            <li id="8">Rice Bowls</li>
+                            <li id="9">Sides And Beverages</li>
+                            <li id="10">Desserts-</li>
+                        </ul>
+                    </div>
+                    <!-- middle products list-->
+                    <div id="productArea">
+
+                    </div>
+                    <!--check out page area-->
+                    <div id="checkout">
+                    </div>
+                </div>
+            </div>
+            <!---->
+
+            <%- include ("partials/footer.partials.ejs") %>
+</body>
+
+</html>
+<script src="scripts/slider.js"></script>
+<script src="scripts/search.js"></script>

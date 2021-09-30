@@ -1,0 +1,46 @@
+
+#mainhead {
+    height: 210px;
+    width: 100%;
+    background-color: yellowgreen;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #logoBox {
+    background-color: white;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 30px;
+    width: 70px;
+  }
+  
+  #mainhead img {
+    height: 70px;
+    width: 70px;
+  }
+  #mainhead > div > p {
+    font-size: 17px;
+    color: rgb(100, 100, 100);
+    font-weight: 500;
+    background-color: yellowgreen;
+    margin: 5px 0px;
+    font-family: Muli, sans-serif;
+  }
+  #theNames{
+    background-color: yellowgreen;
+  }
+  #theName ,#theEmail{
+    color: rgb(51, 51, 51);
+    font-weight: 600;
+    background-color: yellowgreen;
+    font-family: Muli, sans-serif;
+  }
+  
+  #theNumber{
+    color: rgb(51, 51, 51);
+    background-color: yellowgreen;
+    font-family: Muli, sans-serif;
+    font-weight: 600;
+  }
