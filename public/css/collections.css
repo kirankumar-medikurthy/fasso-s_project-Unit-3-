@@ -3,6 +3,10 @@
     margin-top: 10px;
     width: 85%;
     margin: auto;
+<<<<<<< HEAD
+=======
+    grid-area: main-container;
+>>>>>>> main
   }
   
   #container {
@@ -109,12 +113,15 @@
     width: 19%;
     box-shadow: rgb(0 0 0 / 10%) 3px 3px 8px 2px;
     border-radius: 10px;
+<<<<<<< HEAD
     position: sticky;
     height: fit-content;
 
   }
   #cat{
     color: black;
+=======
+>>>>>>> main
   }
   
   #listed{
@@ -132,7 +139,19 @@
   #subtotalPrice{
     background-color:white;
   }
+<<<<<<< HEAD
 
+=======
+  #checkout{
+    min-width: 28%;
+    height: fit-content;  
+    background-color:white;
+    padding-top: 10px;
+    margin-left: 10px;
+    box-shadow: rgb(0 0 0 / 10%) 3px 3px 8px 2px;
+  }
+  
+>>>>>>> main
   #allCartItems h2{
     background-color: white;
   }
@@ -149,11 +168,14 @@
     font-family: 'Mulish', sans-serif;
     cursor: pointer;
   }
+<<<<<<< HEAD
   #Combo-categorys{
     background-color:white;
     color:rgb(100, 100, 100);
   }
   
+=======
+>>>>>>> main
   
   #Combo-category > li:after{
     background-color: lawngreen;
@@ -162,6 +184,7 @@
   #productArea{
     display: grid;
     grid-template-columns: 48% 48%; 
+<<<<<<< HEAD
     grid-gap:1%;
     padding: 0px 5px 0px 5px;
     width: 56%;
@@ -173,6 +196,17 @@
   }
   #checkout{
     width: 30%;
+=======
+    grid-gap:2%;
+    padding: 0px 5px 20px 5px;
+    min-width: 50%;
+    margin-left: 10px;
+    padding-bottom: 100px;
+    overflow: hidden;
+  }
+  #checkout{
+    min-width: 28%;
+>>>>>>> main
     height: fit-content;  
     background-color:white;
     padding-top: 10px;
@@ -247,6 +281,7 @@
   color: black;
   font-size:16px;
   
+<<<<<<< HEAD
 }
 
 
@@ -358,4 +393,6 @@
   margin-left: 68%;
   background-color: white;
 
+=======
+>>>>>>> main
 }

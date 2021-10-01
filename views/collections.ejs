@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <link itemprop="url" rel="stylesheet" href="/css/bar.css">
     <link itemprop="url" rel="stylesheet" href="/css/collections.css">
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
@@ -15,6 +16,17 @@
 <body>
 
     <%- include ("partials/navbar.partials.ejs") %>
+=======
+    <link rel="stylesheet" href="css/bar.css">
+    <link rel="stylesheet" href="css/collections.css">
+    <title>Document</title>
+</head>
+
+<body>
+  
+    <%- include ("partials/navbar.partials.ejs") %>
+    
+>>>>>>> main
         <%- include ("partials/slider.patials.ejs") %>
 
             <!-- search bar 2-->
@@ -27,7 +39,11 @@
                 </div>
             </div>
 
+<<<<<<< HEAD
             <!-- search bar and radio button-->
+=======
+          <!-- search bar and radio button-->  
+>>>>>>> main
             <div id="main-container" class="container">
                 <div id="mainContentHeading">
                     <h1 class="heading">
@@ -40,10 +56,15 @@
                             <span style="background-color: white;">Search for wraps</span>
                         </button>
                         <button>
+<<<<<<< HEAD
                             
                            <input type="radio" name="veg_nonVeg" value="nonVeg" id="nonVeg"onclick="handleVegNonVeg(this)"/>
                             <label for="nonVeg" style="background-color: white;">Non-Veg Only</label>
     
+=======
+                            <input type="radio" name="veg_nonVeg" value="nonVeg" id="nonVeg" onclick="handleNonVeg()" />
+                            <label for="nonVeg" style="background-color: white;">Non-Veg Only</label>
+>>>>>>> main
                         </button>
                         <button>
                             <input type="radio" name="veg_nonVeg" value="veg" id="veg" onclick="handleVeg()" />
@@ -56,6 +77,7 @@
                 <div id="mainProducts">
                     <div id="productCategory">
                         <ul id="Combo-category">
+<<<<<<< HEAD
                             <%category.forEach(function(p){%>
 
                                 <li><a href="/collections/<%=p.id%>" id="Combo-categorys">
@@ -108,6 +130,26 @@
                                     <%= cart.length %>
                              <%}%>
 
+=======
+                            <li id="1">Daily Value Wrap Combos (Save Upto 40% Extra)</li>
+                            <li id="2">Combos for 1 (Save upto 15% Extra)</li>
+                            <li id="3">Combos for 2 (Save upto 20% Extra)</li>
+                            <li id="4">Combos for 4 (Save upto 25% Extra)</li>
+                            <li id="5">Limited Period Collection</li>
+                            <li id="6">Signature Wraps</li>
+                            <li id="7">Classic Wraps</li>
+                            <li id="8">Rice Bowls</li>
+                            <li id="9">Sides And Beverages</li>
+                            <li id="10">Desserts-</li>
+                        </ul>
+                    </div>
+                    <!-- middle products list-->
+                    <div id="productArea">
+
+                    </div>
+                    <!--check out page area-->
+                    <div id="checkout">
+>>>>>>> main
                     </div>
                 </div>
             </div>
@@ -117,6 +159,11 @@
 </body>
 
 </html>
+<<<<<<< HEAD
 <script src="/scripts/slider.js"></script>
 <script src="/scripts/search.js"></script>
 <script  src="/scripts/collection.js"></script>
+=======
+<script src="scripts/slider.js"></script>
+<script src="scripts/search.js"></script>
+>>>>>>> main

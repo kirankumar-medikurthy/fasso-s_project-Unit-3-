@@ -72,13 +72,21 @@
   }
   #userName{
     cursor: pointer;
+<<<<<<< HEAD
     font-size: 17px;
+=======
+    font-size: 20px;
+>>>>>>> main
     color: rgb(86, 64, 153);
     font-weight: 530;
     text-transform: capitalize;
     line-height: 1.25;
     margin-right: 5px;
+<<<<<<< HEAD
     width: 200px;
+=======
+    width: 80px;
+>>>>>>> main
   }
   
   
@@ -122,8 +130,13 @@
   position: absolute;
   width: 370px;
   margin: -100px 0 0 0;
+<<<<<<< HEAD
     padding:125px 70px 0px 30px;
   height: 100%;
+=======
+    padding:70px 70px 0px 30px;
+  height: 97%;
+>>>>>>> main
   right: -100px;
   background: white;
   list-style-type: none;
@@ -144,11 +157,19 @@
     align-items: center;
     color: rgb(126, 126, 126) !important;
   }
+<<<<<<< HEAD
   /* a {
   text-decoration: none !important;
   
   }
    */
+=======
+  a {
+  text-decoration: none !important;
+  
+  }
+  
+>>>>>>> main
   
   #menu li:hover{
     background-color: rgb(247, 243, 238);
