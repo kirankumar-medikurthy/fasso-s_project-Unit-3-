@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link itemprop="url" rel="stylesheet" href="/css/bar.css">
-    <link itemprop="url" rel="stylesheet" href="/css/collections.css">
+    <link rel="stylesheet" href="/css/bar.css">
+    <link rel="stylesheet" href="/css/collection.css">
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
     <title>Document</title>
@@ -41,12 +41,15 @@
                         </button>
                         <button>
                             
-                           <input type="radio" name="veg_nonVeg" value="nonVeg" id="nonVeg"onclick="handleVegNonVeg(this)"/>
-                            <label for="nonVeg" style="background-color: white;">Non-Veg Only</label>
-    
+                            
+                           <input type="radio" name="veg_nonVeg" value="nonVeg" id="nonVeg"/>
+                            <a href ='/collections/nonveg'>
+                           <label for="nonVeg" style="background-color: white;">Non-Veg Only</label>
+                            </a>
                         </button>
                         <button>
-                            <input type="radio" name="veg_nonVeg" value="veg" id="veg" onclick="handleVeg()" />
+
+                            <input type="radio" name="veg_nonVeg" value="veg" id="veg" />
                             <label for="veg" style="background-color: white;">Veg Only</label>
                         </button>
                     </div>
@@ -85,7 +88,7 @@
                                 <div id="clear"></div>
                                 <p id="readMore">Read More</p>
                                 <img src="../images/star.png" id="star" />
-                                <button id="button" data-food="<%= JSON.stringify(p) %>" >Add</button>
+                               <a href="/<%=p.id%>"> <button id="button" data-food="<%= JSON.stringify(p) %>" >Add</button></a>
                                 <div id="clear"></div>
                                 <p id="boughtTimes"><%=p.boughtTime%> bought this</p>
                                 <p id="Customisable">Customisable</p>
@@ -93,25 +96,8 @@
                             <%});%>
                     </div>
                     <!--check out page area-->
-                    <div id="checkout">
-                        <% if(cart.length==0){%>
-                            <h2 style="font-size: 20px;color: rgb(51, 51, 51); font-family: 'Mulish', sans-serif;">Empty
-                                Cart</h2>
-                            <div class="emptyCart">
-                                <img id="emptyCartImage" src="../images/emptyCart.svg" alt="empty cart"
-                                    style="width:270px;margin:20px 2px 2px 20px" />
-                                <p style="width:270px;margin:auto;text-align:center;  color: rgb(153, 153, 153);
-                                              font-weight: 500;">Empty Cart is a sign of an empty stomach.</p>
-                            </div>
-                            <%} else {%>
-                               
-                                    <%= cart.length %>
-                             <%}%>
-
-                    </div>
                 </div>
-            </div>
-            <!---->
+                </div>   
 
             <%- include ("partials/footer.partials.ejs") %>
 </body>
@@ -120,3 +106,7 @@
 <script src="/scripts/slider.js"></script>
 <script src="/scripts/search.js"></script>
 <script  src="/scripts/collection.js"></script>
+<script>
+    
+   
+</script>

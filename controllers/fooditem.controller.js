@@ -6,6 +6,7 @@ const fooditems = require("../models/fooditems.model");
 
 const router = express.Router();
 
+// router.get("", crudController.get(fooditems));
 
 router.get("", crudController.FoodItemSearch(fooditems));
 
@@ -18,6 +19,4 @@ router.delete("/:id", crudController.Delete(fooditems));
 router.get("/:id", crudController.findOne(fooditems));
 
 
-
-
-    module.exports = router;
+module.exports = router;

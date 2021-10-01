@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup</title>
+    <link rel="shortcut icon"
+        href="https://assets.faasos.io/order.faasos.io/production/app/public/images/faviconFaasos.png" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/signupbackground.png);
+            background-size: cover;
+        }
+
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        /* #containers2 {
+            display: flex;
+            justify-content: center;
+        } */
+
+        #containers {
+            display: none;
+        }
+
+        .hero {
+
+            background-color: white;
+            width: 470px;
+            height: 520px;
+            /* padding-top:100px ; */
+            /* position: absolute; */
+            margin-top: 30px;
+            border-radius: 8px;
+            border-color: black;
+            /* modified by me */
+            margin-left: 36%;
+            margin-top: 5%;
+
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        input {
+            width: 400px;
+            height: 55px;
+        }
+
+        #btns {
+            background-color: rgb(223, 209, 17)
+        }
+
+        #btns:hover {
+            cursor: pointer;
+        }
+
+        #names {
+            margin-top: 30px;
+            font-size: 16px;
+            border: 1px solid rgb(224, 224, 224);
+            padding-left: 10px;
+
+        }
+
+        .b0x,
+        p {
+            margin-left: 24px;
+        }
+
+        #p1s {
+            margin-left: 100px;
+        }
+
+        #ims {
+            /* margin-left: 140px; */
+
+            margin-top: -27px;
+            width: 18%;
+            margin-right: 6px;
+            border-radius: 100%;
+            /* box-shadow: 10px 10px 5px #ccc; */
+            box-shadow: 2px 10px 8px #ccc;
+
+            transform: skewY(10deg);
+            float: right;
+
+        }
+
+        input {
+            border-radius: 4px;
+            border-color: white;
+        }
+
+        #selects {
+            width: 105px;
+            height: 55px;
+            font-weight: 600;
+            border: 1px solid rgb(224, 224, 224);
+        }
+
+        #nums {
+            width: 300px;
+            height: 55px;
+            font-size: 16px;
+            border: 1px solid rgb(224, 224, 224);
+            padding-left: 10px;
+
+        }
+
+ 
+        #email {
+            font-size: 16px;
+            border: 1px solid rgb(224, 224, 224);
+            padding-left: 10px;
+
+        }
+
+        #btm:hover {
+            cursor: pointer;
+        }
+
+        .popup-overlay {
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: none;
+        }
+
+        .popup {
+            position: fixed;
+            top: -150%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 435px;
+            background: #f5f5f5;
+            font-family: "Raleway";
+            padding: 20px;
+            border-radius: 4px;
+            height: 450px;
+        }
+
+
+        .popup-close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 20px;
+            background: #555;
+            border-radius: 10px;
+            color: #eee;
+            font-weight: 600;
+
+
+        }
+
+        body.popup-active .popup {
+            top: 50%;
+        }
+
+        body.popup-active .popup-overlay {
+            display: block;
+        }
+
+        #im {
+            float: left;
+            margin-left: 318px;
+            margin-top: -17px;
+            width: 20%;
+            padding-top: 0px;
+            border-radius: 100%;
+            /* box-shadow: 10px 10px 5px #ccc; */
+            box-shadow: 2px 10px 8px #ccc;
+
+            transform: skewY(10deg);
+            border-color: #3498db;
+
+        }
+
+        #select {
+            width: 80px;
+            height: 55px;
+            border-radius: 4px;
+            border-color: rgb(155, 187, 187);
+        }
+
+        #num {
+            width: 329px;
+            height: 54px;
+            border-radius: 4px;
+            border-color: rgb(208, 236, 236);
+            padding-left: 10px;
+        }
+
+        #enter {
+            float: left;
+        }
+
+        #btn {
+            width: 430px;
+            height: 50px;
+            margin-bottom: 200px;
+            border-radius: 4px grey;
+            color: rgb(255, 255, 255);
+            /* background-color: rgba(214, 209, 209, 0.945); */
+            font-family: 'Mulish', sans-serif;
+            font-size: 20px;
+            border-color: rgb(208, 236, 236);
+            background-color: rgb(223, 209, 17)
+                /* font-family: 'Roboto', sans-serif */
+        }
+
+        #btn:hover {
+            cursor: pointer;
+            background-color: black;
+            color: white;
+        }
+
+        #last {
+            display: flex;
+            justify-content: center;
+            margin-top: -100px;
+        }
+
+        #login:hover {
+            cursor: pointer;
+        }
+
+        #signup {
+            margin-top: 17px;
+            margin-left: 10px;
+            font-weight: 550;
+        }
+
+        #p1s {
+            float: left;
+            width: 200px;
+        }
+
+        #login {
+            font-weight: 600;
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="containers2">
+        <form action="/signup" method="POST">
+            <div class="hero">
+                <div id="div1">
+                    <h2 style="font-family: 'Mulish', sans-serif;padding-top:10px;padding-left:24px"> <a
+                            href="./index">
+                            <</a> Sign Up </h2>
+
+                    <img id='ims'
+                        src="https://mir-s3-cdn-cf.behance.net/projects/404/3c673a111780509.Y3JvcCw5OTksNzgyLDAsMA.jpg">
+                    <p style="font-family: 'Mulish', sans-serif;color:grey;font-size:13px;margin-top: 5px;" id="btm">
+                        Create a account with new phone number</p>
+                </div>
+                <div class="b0x" style="margin-top:39px">
+                    <select id="selects" value="selects">
+                        <option value="">India +91 </option>
+                        <option value="">USA +01</option>
+                        <option value="">Canada +02</option>
+                        <option value="">UK +03</option>
+                        <option value="">Germany +04</option>
+                        <option value="">Italy +05</option>
+                        <option value="">China +06</option>
+                        <option value="">Japan +07</option>
+                        <option value="">France +08</option>
+                        <option value="">Australia +09</option>
+                        <option value="">Austria +10</option>
+                        <option value="">Pakistan +11</option>
+                        <option value="">srilanka +12</option>
+
+                    </select>
+                   
+                    <input id="nums" type="Number" placeholder="Phone Number"
+                    name="Phone"/><br>
+                </div>
+                <div class="b0x">
+                    <input id="names" type="text" placeholder="Name" 
+                    name="Name"/>
+                </div><br>
+
+                <div class="b0x">
+                    <input id="email" type="email" placeholder="Email Address"
+                    name="email"/>
+                </div><br>
+                <div class="b0x">
+                    <input id="btns" type="submit" value="CREATE  ACCOUNT"
+                        style="font-family: 'Mulish', sans-serif; font-size:18px">
+                </div><br>
+                <div>
+                    <p style="font-family: 'Mulish', sans-serif;color:grey"> By creating an account,I accept <a
+                            href="#">Terms and Conditions</a></p>
+                </div><br><br><br>
+                <div>
+                    <p id="p1s" style="font-family: 'Mulish', sans-serif;color:grey"></p>
+                    <a><p id='login'></a></p>
+
+
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-------------------MY code---------------------->
+    <div id="containers3">
+        <div class='popup-overlay'></div>
+        <div id="popup" class="popup">
+            <div id="modalss">
+                <div id="div1" style="overflow: hidden;">
+                    <h1 style="font-family: 'Mulish', sans-serif;margin-left:5px;">
+                        <a href="../Pages/Index.html">
+                            < </a>&nbsp;Login
+                    </h1>
+                    <p id="enter" style="color: grey ;font-size:13px; font-family: 'Roboto', sans-serif;margin-left:5px;
+               margin-bottom: 10px;">Enter your phone Number to continue</p>
+                    <img id='im'
+                        src="https://mir-s3-cdn-cf.behance.net/projects/404/3c673a111780509.Y3JvcCw5OTksNzgyLDAsMA.jpg">
+                </div>
+                <div id="mid">
+                    <div id="div2">
+                        <form onsubmit="submitForm(event)">
+                            <select id="select" value="select">
+                                <option value="">India</option>
+                                <option value="">USA</option>
+                                <option value="">Canada</option>
+                                <option value="">UK</option>
+                                <option value="">Germany</option>
+                                <option value="">Italy</option>
+                                <option value="">China</option>
+                                <option value="">Japan</option>
+                                <option value="">France</option>
+                                <option value="">Australia</option>
+                                <option value="">Austria</option>
+                                <option value="">Pakistan</option>
+                                <option value="">srilanka</option>
+                            </select>
+
+                            <input id="num" type="Number" placeholder="Phone Number required"
+                                style="font-size: 20px;"><br><br>
+                            <button id="btn">CONTINUE</button>
+                        </form>
+                    <!-- </div> -->
+                    <!-- <div id="last"> -->
+                        <!-- <p style="color: grey">Dont have an account?</p>
+                        <a id="signup" href="/login" style="text-decoration: none;margin-top: -1px;">Log In</a> -->
+                    <!-- </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        if (!localStorage.getItem("info")) {
+            localStorage.setItem("info", JSON.stringify([]))
+            // var info1=[];
+            console.log("anny");
+        }
+
+
+
+
+        function submitForms(event) {
+            var flage1 = false, flage2 = false, flage3 = false;
+            var numberlen = document.getElementById('nums').value;
+            var obj = {};
+            var number = document.getElementById('nums').value;
+
+            if (number.length >= 10) {
+                flage1 = true;
+                // console.log("a")
+            }
+            else {
+                alert("please enter 10 digit")
+            }
+            obj.numbers = number;
+            var name = document.getElementById('names').value;
+            if (name != "") {
+                flage2 = true;
+                // console.log("b")
+            }
+            else {
+                alert("please enter names")
+            }
+            obj.names = name;
+            var email = document.getElementById('email').value;
+            if (email != "") {
+                flage3 = true;
+                // console.log("c")
+            }
+            else {
+                alert("please enter email")
+            }
+            obj.emails = email;
+            // var btns= document.getElementById('btns')
+
+
+            let info_data = JSON.parse(localStorage.getItem("info"));
+            info_data.push(obj);
+
+            if (flage1 == true && flage2 == true && flage3 == true) {
+                alert("Registration sucsessfully copleted")
+                localStorage.setItem("info", JSON.stringify(info_data))
+                event.preventDefault();
+                location.href = "./Index.html";
+            }
+            // if( flage3 && flage1){
+            //     console.log("annyee")
+
+            //  }
+
+
+        }
+        var btns = document.getElementById('btns')
+
+        btns.addEventListener('click', save)
+    </script>
+</body>
+
+</html>
+
+<!-- <script src="../script/top-menu.js"></script> -->
