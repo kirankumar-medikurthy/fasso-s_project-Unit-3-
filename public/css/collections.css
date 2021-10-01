@@ -1,0 +1,246 @@
+
+#main-container{
+    margin-top: 10px;
+    width: 85%;
+    margin: auto;
+    grid-area: main-container;
+  }
+  
+  #container {
+    margin: 0 auto;
+  }
+  #mainContentHeading{
+    top: 0;
+    z-index: 1;
+    padding: 2rem 0;
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+  }
+  
+  #main-container > hr {
+    color: grey;
+  }
+  
+  .heading {
+    font-size: 1.3rem;
+    color: rgb(51, 51, 51);
+    font-weight: 600;
+    font-family: 'Mulish', sans-serif;
+  }
+  .filterbutton{
+    display: flex;
+  }
+  
+  .filterbutton > button > img {
+    width: 13px;
+    height: 13px;
+    margin-right: 13px;
+    padding-left: 5px;
+  }
+  
+  
+  .filterbutton > button {
+    margin: 0px 10px 0px 0px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgb(0 0 0 / 10%) 3px 3px 8px 2px;
+    border: none;
+    border-radius: 0.2rem;
+    font-size: 15px;
+    color: gray;
+    min-width: 150px;
+    cursor: pointer;
+    height: 35px;
+    font-weight:550;
+    
+  }
+
+  
+.filterbutton button:nth-child(1){
+    width: 250px;
+    text-align: left;
+    padding: 2px 5px 2px 2px;
+   border: 1px solid lightgrey;
+   font-size: 17px;
+  }
+  
+  .filterbutton button:nth-child(2){
+    width: 100px;
+    text-align: left;
+    padding: 2px 5px 2px 2px;
+    border: 1px solid lightgrey;
+  }
+  .filterbutton button:nth-child(3){
+    min-width: 100px;
+    text-align: left;
+    padding: 2px 5px 2px 2px;
+    border: 1px solid lightgrey;
+  }
+  .filterbutton > button > img,
+  input {
+    width: 13px;
+    height: 13px;
+    margin-right: 13px;
+  }
+  
+  .filterbutton  > button > input[type='radio'] {
+    float: left;
+    height: 15px;
+    width: 15px;
+    background-color: #d5d5d5;
+    border-radius: 2px; 
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .filterbutton > button > input[type='radio']:hover {
+    background-color:grey;
+  }
+  
+  .filterbutton > button > input[type='radio']:checked {
+    background-color: #ffd344;
+  }
+  
+  #mainProducts {
+    display: flex;
+    margin: 1rem 0;
+  }
+  #productCategory{
+    height: 460px;  
+    width: 19%;
+    box-shadow: rgb(0 0 0 / 10%) 3px 3px 8px 2px;
+    border-radius: 10px;
+  }
+  
+  #listed{
+    background-color:white;
+    margin-top: 5px;
+  }
+  
+  #prc{
+    background-color:white;
+  }
+  #num_inc{
+    background-color:white;
+  }
+  
+  #subtotalPrice{
+    background-color:white;
+  }
+  #checkout{
+    min-width: 28%;
+    height: fit-content;  
+    background-color:white;
+    padding-top: 10px;
+    margin-left: 10px;
+    box-shadow: rgb(0 0 0 / 10%) 3px 3px 8px 2px;
+  }
+  
+  #allCartItems h2{
+    background-color: white;
+  }
+  
+  #combo-category ul{
+    list-style: none;
+  }
+  #Combo-category > li{
+    background-color:white;
+    color:rgb(100, 100, 100);
+    font-size: 14px;
+    padding: 10px 15px 13px 16px ;
+    font-weight: 520;
+    font-family: 'Mulish', sans-serif;
+    cursor: pointer;
+  }
+  
+  #Combo-category > li:after{
+    background-color: lawngreen;
+    font-weight: 900;
+  }
+  #productArea{
+    display: grid;
+    grid-template-columns: 48% 48%; 
+    grid-gap:2%;
+    padding: 0px 5px 20px 5px;
+    min-width: 50%;
+    margin-left: 10px;
+    padding-bottom: 100px;
+    overflow: hidden;
+  }
+  #checkout{
+    min-width: 28%;
+    height: fit-content;  
+    background-color:white;
+    padding-top: 10px;
+    margin-left: 10px;
+    box-shadow: rgb(0 0 0 / 10%) 3px 3px 8px 2px;
+  }  
+
+  .modal_container button.close {
+    position: absolute;
+    right: 125px;
+    top: 10px;
+    font-size: 32px;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-top: 60px;
+}
+.action {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 170px;
+    margin-right: 10px;
+}
+
+.modal_wraper {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .3s ease-in-out;
+}
+
+.modal_container {
+    background: rgba(245,245,245,248);
+    height: 480px;
+    max-width: 100%;
+    border-radius: 4px;
+    position: relative;
+    transform: translateY(-100%);
+    transition: all .3s ease-in-out;
+
+}
+
+.modal_container button.close:hover {
+    color: rgb(184, 33, 33);
+}
+
+.active {
+    opacity: 1;
+    pointer-events: all;
+}
+.modal_wraper.active .modal_container {
+    transform: translateY(0px);
+}
+.sear1{
+  display: flex;
+  justify-content: center;
+  width: 1050px;
+  height: 84px;
+  background:#ffffff;
+  margin-left:100px ;
+  margin-top: 46px;
+  border:none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+  outline: none;
+  color: black;
+  font-size:16px;
+  
+}

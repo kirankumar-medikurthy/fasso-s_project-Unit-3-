@@ -1,0 +1,84 @@
+
+#userprofileDetail {
+    max-width: 1170px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: rgb(245, 245, 246);
+  }
+  
+  #navBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  #bar1,
+  #bar2,
+  #bar3,
+  #bar4 {
+  border-bottom: 1px solid rgb(126, 126, 126);
+  padding: 20px 100px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight:550;
+  font-family: Muli, sans-serif;
+  }
+  
+  
+  #bar1,
+  #bar2,
+  #bar3,
+  #bar4 >a{
+    color: rgb(126, 126, 126);
+    
+  }
+  
+  #profile {
+    margin: 2rem;
+    display: none;
+  }
+  #Mprofile{
+    font-family: Muli, sans-serif;
+    margin:2% auto 2% 11%;
+    letter-spacing: 0.5px;
+    color:  rgb(51, 51, 51);
+  }
+  
+  #profileLogo {
+      background-color: white;
+      border-radius: 5px;
+      width: 100px;
+      padding: 25px 50px;
+      margin:2% 10px 2% 11%;
+      float: left;
+    }
+    
+    #profileLogo > img {
+      height: 70px;
+      width: 70px;
+    }
+    
+ 
+  #userDetail{
+    width: 50%;
+  }
+  
+    #userBoxp{
+      color: rgb(126, 126, 126);
+      font-size: 18px;
+      background-color: white;
+      font-weight: 500;
+      margin-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    /* #prodName h3{
+        background-color: white;
+        color:rgb(51, 51, 51);
+      }   */
+
+    #userDetail h3{
+        background-color: white;
+        color:rgb(51, 51, 51);  
+}
