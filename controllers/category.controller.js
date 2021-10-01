@@ -6,7 +6,15 @@ const crudController = require("./crud.controller");
 
 const CategoryItemsModels = require("../models/categorys.model");
 
-router.get("", crudController.get(CategoryItemsModels));
+// router.get("", crudController.get(CategoryItemsModels));
+
+router.get("", async function(req, res) {
+    const category = await CategoryItemsModels.find().lean().exec();
+
+    res.render("collections", {
+        category: category
+    })
+})
 
 router.post("", crudController.post(CategoryItemsModels));
 

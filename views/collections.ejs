@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/bar.css">
-    <link rel="stylesheet" href="css/collections.css">
+    <link itemprop="url" rel="stylesheet" href="/css/bar.css">
+    <link itemprop="url" rel="stylesheet" href="/css/collections.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
     <title>Document</title>
+
 </head>
 
 <body>
-  
+
     <%- include ("partials/navbar.partials.ejs") %>
-    
         <%- include ("partials/slider.patials.ejs") %>
 
             <!-- search bar 2-->
@@ -25,7 +27,7 @@
                 </div>
             </div>
 
-          <!-- search bar and radio button-->  
+            <!-- search bar and radio button-->
             <div id="main-container" class="container">
                 <div id="mainContentHeading">
                     <h1 class="heading">
@@ -38,8 +40,11 @@
                             <span style="background-color: white;">Search for wraps</span>
                         </button>
                         <button>
-                            <input type="radio" name="veg_nonVeg" value="nonVeg" id="nonVeg" onclick="handleNonVeg()" />
+
+                            <input type="radio" name="veg_nonVeg" value="nonVeg" id="nonVeg"
+                                data-food="<%= JSON.stringify(foods.veg_NonVeg)%>" />
                             <label for="nonVeg" style="background-color: white;">Non-Veg Only</label>
+
                         </button>
                         <button>
                             <input type="radio" name="veg_nonVeg" value="veg" id="veg" onclick="handleVeg()" />
@@ -52,24 +57,61 @@
                 <div id="mainProducts">
                     <div id="productCategory">
                         <ul id="Combo-category">
-                            <li id="1">Daily Value Wrap Combos (Save Upto 40% Extra)</li>
-                            <li id="2">Combos for 1 (Save upto 15% Extra)</li>
-                            <li id="3">Combos for 2 (Save upto 20% Extra)</li>
-                            <li id="4">Combos for 4 (Save upto 25% Extra)</li>
-                            <li id="5">Limited Period Collection</li>
-                            <li id="6">Signature Wraps</li>
-                            <li id="7">Classic Wraps</li>
-                            <li id="8">Rice Bowls</li>
-                            <li id="9">Sides And Beverages</li>
-                            <li id="10">Desserts-</li>
+                            <%category.forEach(function(p){%>
+
+                                <li><a href="/collections/<%=p.id%>" id="Combo-categorys">
+                                        <%=p.category_name%>
+                                    </a></li>
+                                <%});%>
                         </ul>
                     </div>
                     <!-- middle products list-->
-                    <div id="productArea">
 
+                    <div id="productArea">
+                        <%foods.forEach(function(p){ %>
+
+                            <div id="prod">
+                                <img src="<%=p.img_src%>" id="prodImage">
+                                <p id="prodname">
+                                    <%=p.food_name%>
+                                </p>
+                                <p id="pveg_nonVeg">
+                                    <%=p.veg_NonVeg%>
+                                </p>
+                                <p id="prodPrice">₹ <%=p.price%>
+                                </p>
+                                <div id="clear"></div>
+                                <p id="proddescription">
+                                    <%=p.description%>
+                                </p>
+                                <div id="clear"></div>
+                                <p id="readMore">Read More</p>
+                                <img src="../images/star.png" id="star" />
+                                <button id="button" data-food="<%= JSON.stringify(p) %>">Add</button>
+                                <div id="clear"></div>
+                                <p id="boughtTimes">
+                                    <%=p.boughtTime%> bought this
+                                </p>
+                                <p id="Customisable">Customisable</p>
+                            </div>
+                            <%});%>
                     </div>
                     <!--check out page area-->
                     <div id="checkout">
+                        <% if(cart.length==0){%>
+                            <h2 style="font-size: 20px;color: rgb(51, 51, 51); font-family: 'Mulish', sans-serif;">Empty
+                                Cart</h2>
+                            <div class="emptyCart">
+                                <img id="emptyCartImage" src="../images/emptyCart.svg" alt="empty cart"
+                                    style="width:270px;margin:20px 2px 2px 20px" />
+                                <p style="width:270px;margin:auto;text-align:center;  color: rgb(153, 153, 153);
+                                              font-weight: 500;">Empty Cart is a sign of an empty stomach.</p>
+                            </div>
+                            <%} else {%>
+
+                                <%= cart.length %>
+                                    <%}%>
+
                     </div>
                 </div>
             </div>
@@ -79,5 +121,6 @@
 </body>
 
 </html>
-<script src="scripts/slider.js"></script>
-<script src="scripts/search.js"></script>
+<script src="/scripts/slider.js"></script>
+<script src="/scripts/search.js"></script>
+<script type='module' src="/scripts/collection.js"></script>

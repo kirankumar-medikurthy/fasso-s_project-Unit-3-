@@ -6,15 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/index.css">
-    <title>Order Online from Faasos</title>
-    <link rel="shortcut icon"
-        href="https://assets.faasos.io/order.faasos.io/production/app/public/images/faviconFaasos.png" />
-
+    <title>Document</title>
 </head>
 
 <body>
     <div id="container">
-
+        <!-- <img src="../../public/images/background.jpg"/> -->
         <div id="fasos">
             <img src="https://assets.faasos.io/faasos_v2/faasosLogoBrand.svg" alt="faasos" height="72" width="80"
                 style="margin-top:40px">
@@ -28,7 +25,7 @@
                     <div id="modalss">
                         <div id="div1" style="overflow: hidden;">
                             <h1 style="font-family: 'Mulish', sans-serif;margin-left:5px;">
-                                <a href="./index">
+                                <a href="../Pages/Index.html">
                                     < </a>&nbsp;Login
                             </h1>
                             <p id="enter" style="color: grey ;font-size:13px; font-family: 'Roboto', sans-serif;margin-left:5px;
@@ -38,7 +35,7 @@
                         </div>
                         <div id="mid">
                             <div id="div2">
-                                <form action="/login" method="POST">
+                                <form onsubmit="submitForm(event)">
                                     <select id="select" value="select">
                                         <option value="">India</option>
                                         <option value="">USA</option>
@@ -55,21 +52,21 @@
                                         <option value="">srilanka</option>
                                     </select>
 
-                                    <input id="num" type="Number" placeholder="Phone Number required" required name="Phone"
+                                    <input id="num" type="Number" placeholder="Phone Number required"
                                         style="font-size: 20px;"><br><br>
-                                    <button id="btn" type="submit">CONTINUE</button>
+                                    <button id="btn">CONTINUE</button>
                                 </form>
                             </div>
                             <div id="last">
                                 <p style="font-family: 'Roboto', sans-serif;color: grey">Dont have an account?</p>
-                                <a id="signup" href="/signup" style="text-decoration: none">Sign up</a>
+                                <a id="signup" href="./signup.html" style="text-decoration: none">Sign Up</a>
                             </div>
                         </div>
                     </div>
                 </div>
 
 
-                <button class="but"><a href="/signup">Sign up</a></button>
+                <button class="but"><a href="./signup.html">Sign Up</a></button>
                 <div class="float-r clear">
 
                 </div>
@@ -144,7 +141,7 @@
 
     </div>
 
-     <div id="foodie">
+    <div id="foodie">
         <p class="tap " style="text-align:center;">Here are some additional measures which our kitchen teams are
             rigorously
             following!</p>
@@ -176,7 +173,6 @@
             </div>
         </div>
     </div>
-    <%- include ("partials/footer.partials.ejs") %>
 </body>
 
 </html>
