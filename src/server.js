@@ -51,7 +51,8 @@ app.get("/index", (req, res) => {
 
 app.get("/collections", async(req, res) => {
 	try {
-		res.render("collections");
+		const name =  req.session.user.Name;
+		res.render("collections",{name});
 	} catch (err) {
 		return res.status(400).json({ err: err.message });
 	}
@@ -103,8 +104,8 @@ app.get("/signup", (req, res) => {
 app.post("/signup", async (req, res) => {
 	const registered = await Signup.create(req.body);
 	setTimeout(() => {
-	req.flash('message',"Signed up Successfully!...")
-	res.render("index");	
+	// req.flash('message',"Signed up Successfully!...")
+	res.redirect("index");	
 	},1000)
 
 })
