@@ -6,7 +6,9 @@ const fooditems = require("../models/fooditems.model");
 
 const router = express.Router();
 
-router.get("", crudController.get(fooditems));
+// router.get("", crudController.get(fooditems));
+
+router.get("", crudController.FoodItemSearch(fooditems));
 
 router.post("", crudController.post(fooditems));
 

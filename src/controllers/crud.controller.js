@@ -24,10 +24,16 @@ const findOne = (modal) => async(req, res) => {
     return res.status(200).send({ items });
 }
 
+const FoodItemSearch = (modal) => async(req, res) => {
+    const items = await modal.find().populate("category").lean().exec()
+    return res.status(200).send({ items });
+}
+
 module.exports = {
     post,
     get,
     Delete,
     findOne,
-    patch
+    patch,
+    FoodItemSearch
 }
