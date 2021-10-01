@@ -4,10 +4,10 @@ let addToCart  = document.querySelectorAll('#button');
 // // let nonVeg  = document.querySelectorAll('#nonVeg');
 
 
-// function handleNonVeg(){
-//    let food="Non veg";
-//    cats(food)
-// }
+function handleNonVeg(){
+   let food="Non veg";
+   cats(food)
+}
 
 let currentCategory = 'both';
 
