@@ -144,11 +144,11 @@
     align-items: center;
     color: rgb(126, 126, 126) !important;
   }
-  a {
+  /* a {
   text-decoration: none !important;
   
   }
-  
+   */
   
   #menu li:hover{
     background-color: rgb(247, 243, 238);
