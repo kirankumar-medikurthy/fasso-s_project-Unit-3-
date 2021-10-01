@@ -72,13 +72,13 @@
   }
   #userName{
     cursor: pointer;
-    font-size: 20px;
+    font-size: 17px;
     color: rgb(86, 64, 153);
     font-weight: 530;
     text-transform: capitalize;
     line-height: 1.25;
     margin-right: 5px;
-    width: 80px;
+    width: 200px;
   }
   
   
@@ -122,8 +122,8 @@
   position: absolute;
   width: 370px;
   margin: -100px 0 0 0;
-    padding:70px 70px 0px 30px;
-  height: 97%;
+    padding:125px 70px 0px 30px;
+  height: 100%;
   right: -100px;
   background: white;
   list-style-type: none;
