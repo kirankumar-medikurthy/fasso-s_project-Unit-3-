@@ -13,7 +13,7 @@ let currentCategory = 'both';
 
 function handleVegNonVeg(myRadio) {
   currentCategory = myRadio.value;
-  axios.get('/collections/currentCategory').then(res =>{
+  axios.get('/collections&currentCategory').then(res =>{
       console.log(res);
     })
 }
