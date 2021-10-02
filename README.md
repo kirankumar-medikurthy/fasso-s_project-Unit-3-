@@ -4,8 +4,8 @@
 # Team Members
    * Shihab Shaikh
    * Kiran Medikurthy
-   * Abhishek Singh
-   * Deeptesh Bishwas
+   * Kabi Gadal
+   * Pooja Kumari
 
 
 
@@ -19,7 +19,6 @@
      
      
  * Main UI/UX Highlights:
-      * Fully responsive website (Across all devices)
       * All colors used are same as that of original one
       * All products have their own images and details (same as of original one)
       * Original Faasos Youtube video embedded
