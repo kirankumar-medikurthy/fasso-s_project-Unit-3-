@@ -8,13 +8,89 @@
     <link itemprop="url" rel="stylesheet" href="/css/collections.css">
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
+
+
     <title>Document</title>
 
 </head>
-
+<style>
+.cart{
+        font-size: 20px;
+    color: rgb(51, 51, 51);
+    font-family: 'Mulish', sans-serif;
+    background-color: lightblue;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    padding-left: 4%;
+}
+.prod{
+        height: 39px;
+    width: 102px;
+    border: 1px solid black;
+    text-align: center;
+    padding-top: 16px;
+  
+}
+</style>
 <body>
 
-    <%- include ("partials/navbar.partials.ejs") %>
+<nav>
+    <div id="navContainer">
+        <div id="navLeft">
+            <a href="./Collections">
+                <img src="../images/top-navbar-logo.svg" alt="faasos logo" />
+            </a>
+            <div id="navLocation">
+                <p>Mumbai</p>
+                <p>Mumbai Maharashtra</p>
+            </div>
+        </div>
+        <div id="navRight">
+            <div id="userName">
+                <li id="login" style="background-color: white;">Hi <%= name %>
+                </li>
+            </div>
+            <!-------------------Side NAV BAR---------------------->
+            <nav role='navigation'>
+                <div id="menuToggle">
+                    <input type="checkbox" />
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <ul id="menu">
+                        <a href="./Profile">
+                            <div id="userNameinside">
+                                <li id="logininside" style="background-color: white;">Hi <%= name %>
+                                </li>
+                            </div>
+                            <li><img src="../images/sidebarProfile.svg" id="sidebarImg">Profile</li>
+                            <a href="./order">
+                                <li><img src="../images/sidebarLogout.svg" id="sidebarImg">Manage Orders</li>
+                            </a>
+                            <a href="./Address">
+                                <li><img src="../images/sidebarAddress.svg" id="sidebarImg">Manage Address</li>
+                            </a>
+                            <a href="./payment">
+                                <li><img src="../images/sidebarPayment.svg" id="sidebarImg">Manage Payments</li>
+                            </a>
+                            <a href="#">
+                                <li><img src="../images/sidebarHelp.svg" id="sidebarImg">Help & Supports</li>
+                            </a>
+                            <a href="#">
+                                <li><img src="../images/sidebarAbout.svg" id="sidebarImg">Aboust Us</li>
+                            </a>
+                            <a href="#">
+                                <li><img src="../images/sidebarParty.svg" id="sidebarImg">Party Order</li>
+                            </a>
+                            <a href="./logout">
+                                <li><img src="../images/sidebarLogout.svg" id="sidebarImg">Log Out</li>
+                            </a>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+</nav>
+
         <%- include ("partials/slider.patials.ejs") %>
 
             <!-- search bar 2-->
@@ -87,7 +163,9 @@
                                 <div id="clear"></div>
                                 <p id="readMore">Read More</p>
                                 <img src="../images/star.png" id="star" />
-                                <button id="button" data-food="<%= JSON.stringify(p) %>">Add</button>
+                                <button  type = 'button'id="button">
+                                Add</button>
+                              
                                 <div id="clear"></div>
                                 <p id="boughtTimes">
                                     <%=p.boughtTime%> bought this
@@ -96,10 +174,9 @@
                             </div>
                             <%});%>
                     </div>
-                    <!--check out page area-->
-                    <div id="checkout">
-                        <% if(cart.length==0){%>
-                            <h2 style="font-size: 20px;color: rgb(51, 51, 51); font-family: 'Mulish', sans-serif;">Empty
+                    <!-----Cart-->
+                <div id="checkout">
+                     <h2 style="font-size: 20px;color: rgb(51, 51, 51); font-family: 'Mulish', sans-serif;">Empty
                                 Cart</h2>
                             <div class="emptyCart">
                                 <img id="emptyCartImage" src="../images/emptyCart.svg" alt="empty cart"
@@ -107,12 +184,10 @@
                                 <p style="width:270px;margin:auto;text-align:center;  color: rgb(153, 153, 153);
                                               font-weight: 500;">Empty Cart is a sign of an empty stomach.</p>
                             </div>
-                            <%} else {%>
-
-                                <%= cart.length %>
-                                    <%}%>
+                      
 
                     </div>
+            
                 </div>
             </div>
             <!---->
@@ -123,4 +198,5 @@
 </html>
 <script src="/scripts/slider.js"></script>
 <script src="/scripts/search.js"></script>
+<script src="/scripts/cart.js"></script>
 <script type='module' src="/scripts/collection.js"></script>
