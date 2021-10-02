@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
@@ -65,4 +66,73 @@
 
 </html>
 
+=======
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bar.css">
+    <link rel="stylesheet" href="css/userSection.css">
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="css/address.css">
+
+</head>
+
+<body>
+    <!-------------------Top Bar---------------------->
+    <%- include ("partials/navbar.partials.ejs") %>
+        <!-------------------login section details---------------------->
+        <%- include ("partials/loginSection.partials.ejs") %>
+            <!-------------------Link section details bar---------------------->
+            <%- include ("partials/link.partials.ejs") %>
+                <!-------------------address code start here---------------------->
+
+                <div id="addressbox">
+                    <p>ADD NEW ADDRESS</p>
+                    <!------------popup Logic Starts------------>
+                    <button data-modal-target="#modal" id="button" class="Add-New-btn" onclick=start()>ADD NEW</button>
+                    <div class="modal" id="modal">
+                        <div class="modal-header">
+                            <div class="title"></div>
+                            <button data-close-button class="close-button">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="popup-body">
+                                <img src="https://i.ytimg.com/vi/wtXFWU4r9FQ/maxresdefault.jpg" />
+                                <div id="text1"><b>Residency Road Relocation</b><br /><span>Bangaluru Karnataka</span>
+                                </div>
+                                <form action="/shippingaddress" method="POST">
+                                    <input type="text" placeholder="House/Flat no" id="hsnv">
+                                    <input type="text" placeholder="Landmark" id="location" />
+                                    <div id="buttons">
+                                        <button id="home">Home</button>
+                                        <button id="work"> Work</button>
+                                        <button id="others">Others</button>
+                                    </div>
+                                    <div id="addressstore">
+                                        <button id="savebutton" type="submit">Save Address</button>
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+                        <!-- <div id="overlay"></div> -->
+
+                    </div>
+                </div>
+
+                <div id="addresscontent"></div>
+
+
+                <!-------------------Footer Area---------------------->
+                <%- include ("partials/footer.partials.ejs") %>
+</body>
+
+</html>
+
+>>>>>>> e21eb5e071fad4b68271a39d86a38b79b3058aed
 <script src="scripts/address.js"></script>
