@@ -35,9 +35,5 @@ module.exports = {
     Delete,
     findOne,
     patch,
-<<<<<<< HEAD
-    FoodItemSearch,
-=======
     FoodItemSearch
->>>>>>> main
 }
