@@ -1,5 +1,5 @@
 # Learn by Cloning : fassos Project Clone
-## This clone is made with pure HTML, CSS and JavaScript.
+## This clone is made with pure EJS, CSS and JavaScript,Mongoose,Library,Node Js.
 
 # Team Members
    * Shihab Shaikh
