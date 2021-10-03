@@ -59,9 +59,9 @@ First we have gone through the given website, We tried to understand processes o
 ## signup Page
 ![sign up](https://github.com/kirankumar-medikurthy/MasaiProject-Unit-2/blob/main/scrrenshort/sign-up.png);
 ## Login Page
-![login page](https://github.com/kirankumar-medikurthy/MasaiProject-Unit-2/blob/main/scrrenshort/login.png);
+![login page](https://drive.google.com/file/d/11HAZzTq0Ej8rHleHIz9l1pkDQw9nwT12/view?usp=sharing);
 ## landing page(When user Login into the website)
-![indexpage](https://github.com/kirankumar-medikurthy/MasaiProject-Unit-2/blob/main/scrrenshort/index-page.png);
+![indexpage](https://drive.google.com/file/d/1i3Z3cHdEjl3-wXB_C8h7GkKjz1nnc1rI/view?usp=sharing);
 ## Order Page
 ![order Page](https://github.com/kirankumar-medikurthy/MasaiProject-Unit-2/blob/main/scrrenshort/order%20page.png);
 ## Address page
