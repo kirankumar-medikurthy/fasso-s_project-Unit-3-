@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <html lang="en">
 
 <head>
@@ -139,120 +138,204 @@
     <link itemprop="url" rel="stylesheet" href="/css/collections.css">
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
+
+
     <title>Document</title>
 
 </head>
+<style>
+    .cart {
+        font-size: 20px;
+        color: rgb(51, 51, 51);
+        font-family: 'Mulish', sans-serif;
+        background-color: lightblue;
+        padding-top: 3%;
+        padding-bottom: 3%;
+        padding-left: 4%;
+    }
+    
+    .prod {
+        height: 39px;
+        width: 102px;
+        border: 1px solid black;
+        text-align: center;
+        padding-top: 16px;
+    }
+</style>
 
 <body>
 
-    <%- include ("partials/navbar.partials.ejs") %>
-        <%- include ("partials/slider.patials.ejs") %>
-
-            <!-- search bar 2-->
-
-            <div class="modal_wraper">
-                <div class="modal_container">
-                    <!-- button 1 -->
-                    <button class="close">&times;</button>
-                    <input type="text" id="sear" value="" class="sear1" placeholder="Search for Dishes">
+    <nav>
+        <div id="navContainer">
+            <div id="navLeft">
+                <a href="./Collections">
+                    <img src="../images/top-navbar-logo.svg" alt="faasos logo" />
+                </a>
+                <div id="navLocation">
+                    <p>Mumbai</p>
+                    <p>Mumbai Maharashtra</p>
                 </div>
             </div>
+            <div id="navRight">
+                <div id="userName">
+                    <li id="login" style="background-color: white;">Hi
+                        <%= name %>
+                    </li>
+                </div>
+                <!-------------------Side NAV BAR---------------------->
+                <nav role='navigation'>
+                    <div id="menuToggle">
+                        <input type="checkbox" />
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <ul id="menu">
+                            <a href="./Profile">
+                                <div id="userNameinside">
+                                    <li id="logininside" style="background-color: white;">Hi
+                                        <%= name %>
+                                    </li>
+                                </div>
+                                <li><img src="../images/sidebarProfile.svg" id="sidebarImg">Profile</li>
+                                <a href="./order">
+                                    <li><img src="../images/sidebarLogout.svg" id="sidebarImg">Manage Orders</li>
+                                </a>
+                                <a href="./Address">
+                                    <li><img src="../images/sidebarAddress.svg" id="sidebarImg">Manage Address</li>
+                                </a>
+                                <a href="./payment">
+                                    <li><img src="../images/sidebarPayment.svg" id="sidebarImg">Manage Payments</li>
+                                </a>
+                                <a href="#">
+                                    <li><img src="../images/sidebarHelp.svg" id="sidebarImg">Help & Supports</li>
+                                </a>
+                                <a href="#">
+                                    <li><img src="../images/sidebarAbout.svg" id="sidebarImg">Aboust Us</li>
+                                </a>
+                                <a href="#">
+                                    <li><img src="../images/sidebarParty.svg" id="sidebarImg">Party Order</li>
+                                </a>
+                                <a href="./logout">
+                                    <li><img src="../images/sidebarLogout.svg" id="sidebarImg">Log Out</li>
+                                </a>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+    </nav>
 
-            <!-- search bar and radio button-->
-            <div id="main-container" class="container">
-                <div id="mainContentHeading">
-                    <h1 class="heading">
-                        Order Food Online in <span id="headingLocation">Fort
+    <%- include ("partials/slider.patials.ejs") %>
+
+        <!-- search bar 2-->
+
+        <div class="modal_wraper">
+            <div class="modal_container">
+                <!-- button 1 -->
+                <button class="close">&times;</button>
+                <input type="text" id="sear" value="" class="sear1" placeholder="Search for Dishes">
+            </div>
+        </div>
+
+        <!-- search bar and radio button-->
+        <div id="main-container" class="container">
+            <div id="mainContentHeading">
+                <h1 class="heading">
+                    Order Food Online in <span id="headingLocation">Fort
                         </span>
-                    </h1>
-                    <div class="filterbutton">
-                        <button id="triger">
+                </h1>
+                <div class="filterbutton">
+                    <button id="triger">
                             <img src="../images/searchIcon.svg" alt="" />
                             <span style="background-color: white;">Search for wraps</span>
                         </button>
-                        <button>
+                    <button>
 
                             <input type="radio" name="veg_nonVeg" value="nonVeg" id="nonVeg"
                                 data-food="<%= JSON.stringify(foods.veg_NonVeg)%>" />
                             <label for="nonVeg" style="background-color: white;">Non-Veg Only</label>
 
                         </button>
-                        <button>
+                    <button>
                             <input type="radio" name="veg_nonVeg" value="veg" id="veg" onclick="handleVeg()" />
                             <label for="veg" style="background-color: white;">Veg Only</label>
                         </button>
-                    </div>
-                </div>
-                <hr />
-                <!-- Product fielter area-->
-                <div id="mainProducts">
-                    <div id="productCategory">
-                        <ul id="Combo-category">
-                            <%category.forEach(function(p){%>
-
-                                <li><a href="/collections/<%=p.id%>" id="Combo-categorys">
-                                        <%=p.category_name%>
-                                    </a></li>
-                                <%});%>
-                        </ul>
-                    </div>
-                    <!-- middle products list-->
-
-                    <div id="productArea">
-                        <%foods.forEach(function(p){ %>
-
-                            <div id="prod">
-                                <img src="<%=p.img_src%>" id="prodImage">
-                                <p id="prodname">
-                                    <%=p.food_name%>
-                                </p>
-                                <p id="pveg_nonVeg">
-                                    <%=p.veg_NonVeg%>
-                                </p>
-                                <p id="prodPrice">₹ <%=p.price%>
-                                </p>
-                                <div id="clear"></div>
-                                <p id="proddescription">
-                                    <%=p.description%>
-                                </p>
-                                <div id="clear"></div>
-                                <p id="readMore">Read More</p>
-                                <img src="../images/star.png" id="star" />
-                                <button id="button" data-food="<%= JSON.stringify(p) %>">Add</button>
-                                <div id="clear"></div>
-                                <p id="boughtTimes">
-                                    <%=p.boughtTime%> bought this
-                                </p>
-                                <p id="Customisable">Customisable</p>
-                            </div>
-                            <%});%>
-                    </div>
-                    <!--check out page area-->
-                    <div id="checkout">
-                        <% if(cart.length==0){%>
-                            <h2 style="font-size: 20px;color: rgb(51, 51, 51); font-family: 'Mulish', sans-serif;">Empty
-                                Cart</h2>
-                            <div class="emptyCart">
-                                <img id="emptyCartImage" src="../images/emptyCart.svg" alt="empty cart"
-                                    style="width:270px;margin:20px 2px 2px 20px" />
-                                <p style="width:270px;margin:auto;text-align:center;  color: rgb(153, 153, 153);
-                                              font-weight: 500;">Empty Cart is a sign of an empty stomach.</p>
-                            </div>
-                            <%} else {%>
-
-                                <%= cart.length %>
-                                    <%}%>
-
-                    </div>
                 </div>
             </div>
-            <!---->
+            <hr />
+            <!-- Product fielter area-->
+            <div id="mainProducts">
+                <div id="productCategory">
+                    <ul id="Combo-category">
+                        <%category.forEach(function(p){%>
 
-            <%- include ("partials/footer.partials.ejs") %>
+                            <li>
+                                <a href="/collections/<%=p.id%>" id="Combo-categorys">
+                                    <%=p.category_name%>
+                                </a>
+                            </li>
+                            <%});%>
+                    </ul>
+                </div>
+                <!-- middle products list-->
+
+                <div id="productArea">
+                    <%foods.forEach(function(p){ %>
+
+                        <div id="prod">
+                            <img src="<%=p.img_src%>" id="prodImage">
+                            <p id="prodname">
+                                <%=p.food_name%>
+                            </p>
+                            <p id="pveg_nonVeg">
+                                <%=p.veg_NonVeg%>
+                            </p>
+                            <p id="prodPrice">₹
+                                <%=p.price%>
+                            </p>
+                            <div id="clear"></div>
+                            <p id="proddescription">
+                                <%=p.description%>
+                            </p>
+                            <div id="clear"></div>
+                            <p id="readMore">Read More</p>
+                            <img src="../images/star.png" id="star" />
+                            <button type='button' id="button">
+                                Add</button>
+
+                            <div id="clear"></div>
+                            <p id="boughtTimes">
+                                <%=p.boughtTime%> bought this
+                            </p>
+                            <p id="Customisable">Customisable</p>
+                        </div>
+                        <%});%>
+                </div>
+                <!-----Cart-->
+                <div id="checkout">
+                    <h2 style="font-size: 20px;color: rgb(51, 51, 51); font-family: 'Mulish', sans-serif;">Empty Cart
+                    </h2>
+                    <div class="emptyCart">
+                        <img id="emptyCartImage" src="../images/emptyCart.svg" alt="empty cart" style="width:270px;margin:20px 2px 2px 20px" />
+                        <p style="width:270px;margin:auto;text-align:center;  color: rgb(153, 153, 153);
+                                              font-weight: 500;">Empty Cart is a sign of an empty stomach.</p>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+        <!---->
+
+        <%- include ("partials/footer.partials.ejs") %>
 </body>
 
 </html>
 <script src="/scripts/slider.js"></script>
 <script src="/scripts/search.js"></script>
-<script type='module' src="/scripts/collection.js"></script>
->>>>>>> e21eb5e071fad4b68271a39d86a38b79b3058aed
+<!-- <<<<<<< HEAD <script type='module' src="/scripts/collection.js">
+        </script>
+        >>>>>>> e21eb5e071fad4b68271a39d86a38b79b3058aed ======= -->
+<script src="/scripts/cart.script.js"></script>
+<!-- <script type='module' src="/scripts/collection.js"></script>
+>>>>>>> 9d1424d7c80bea997549095da7607cba9137b3d2 -->
