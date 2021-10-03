@@ -59,9 +59,9 @@ First we have gone through the given website, We tried to understand processes o
 ## signup Page
 ![sign up](https://github.com/kirankumar-medikurthy/MasaiProject-Unit-2/blob/main/scrrenshort/sign-up.png);
 ## Login Page
-![login page](https://drive.google.com/file/d/11HAZzTq0Ej8rHleHIz9l1pkDQw9nwT12/view?usp=sharing);
+![login page](https://github.com/shihab-fw11-297/Back-End-Fassos-Project/blob/main/photos/Untitled.png);
 ## landing page(When user Login into the website)
-![indexpage](https://drive.google.com/file/d/1i3Z3cHdEjl3-wXB_C8h7GkKjz1nnc1rI/view?usp=sharing);
+![indexpage](https://github.com/shihab-fw11-297/Back-End-Fassos-Project/blob/main/photos/screencapture-localhost-7878-collections-2021-10-03-09_40_18.png);
 ## Order Page
 ![order Page](https://github.com/kirankumar-medikurthy/MasaiProject-Unit-2/blob/main/scrrenshort/order%20page.png);
 ## Address page
