@@ -1,5 +1,5 @@
 # Learn by Cloning : fassos Project Clone
-## This clone is made with pure EJS, CSS and JavaScript,Mongoose,Library,Node Js.
+## This clone is made with pure EJS, CSS and JavaScript,Node Js,MongoDB and Library like Mongoose,express,axios,session in this project.
 ## Links Related to Blog and Link to run project  in a Browser
 [Blog Link Here](https://medium.com/@gadalkabi/faasos-clone-dea00f1351c2)
 
