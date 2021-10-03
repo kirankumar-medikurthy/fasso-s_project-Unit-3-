@@ -1,5 +1,5 @@
 # Learn by Cloning : fassos Project Clone
-## This clone is made with pure HTML, CSS and JavaScript.
+## This clone is made with pure EJS, CSS and JavaScript,Mongoose,Library,Node Js.
 
 # Team Members
    * Shihab Shaikh
@@ -59,9 +59,9 @@ First we have gone through the given website, We tried to understand processes o
 ## signup Page
 ![sign up](https://github.com/kirankumar-medikurthy/MasaiProject-Unit-2/blob/main/scrrenshort/sign-up.png);
 ## Login Page
-![login page](https://github.com/kirankumar-medikurthy/MasaiProject-Unit-2/blob/main/scrrenshort/login.png);
+![login page](https://github.com/shihab-fw11-297/Back-End-Fassos-Project/blob/main/photos/Untitled.png);
 ## landing page(When user Login into the website)
-![indexpage](https://github.com/kirankumar-medikurthy/MasaiProject-Unit-2/blob/main/scrrenshort/index-page.png);
+![indexpage](https://github.com/shihab-fw11-297/Back-End-Fassos-Project/blob/main/photos/screencapture-localhost-7878-collections-2021-10-03-09_40_18.png);
 ## Order Page
 ![order Page](https://github.com/kirankumar-medikurthy/MasaiProject-Unit-2/blob/main/scrrenshort/order%20page.png);
 ## Address page
