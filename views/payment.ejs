@@ -1,25 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Payment</title>
+    <link rel="shortcut icon"
+    href="https://assets.faasos.io/order.faasos.io/production/app/public/images/faviconFaasos.png" />
+
     <link rel="stylesheet" href="css/bar.css">
     <link rel="stylesheet" href="css/userSection.css">
     <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="/public/css/payment.css">
 </head>
 
 <body>
     <!-------------------Top Bar---------------------->
     <%- include ("partials/navbar.partials.ejs") %>
-    <!-------------------login section details---------------------->
-    <%- include ("partials/loginSection.partials.ejs") %>
-    <!-------------------Link section details bar---------------------->
-    <%- include ("partials/link.partials.ejs") %>
+        <!-------------------login section details---------------------->
+        <%- include ("partials/loginSection.partials.ejs") %>
+            <!-------------------Link section details bar---------------------->
+            <%- include ("partials/link.partials.ejs") %>
 
-    
-     <!-------------------Footer Area---------------------->
-    <%- include ("partials/footer.partials.ejs") %>
+                <div id="showBar">
+                    <div id="profilebox">
+                        <h3 id="Mprofile">Payment Process</h3>
+                        <!-- <div id="profileLogo">
+                          <img src="./images/logoicon.svg" />
+                        </div> -->
+
+                        <div id="mypayment">
+
+                            <h2>Thanks for Ordering</h2>
+                            <div id="message"></div>
+                            <div class="container">
+
+                                <div class="card">
+                                    <div class="Owner">
+                                        <h3>Owner Name</h3>
+                                        <div class="input-field">
+                                            <input type="text" placeholder="Name" id="Cardname">
+                                        </div>
+                                    </div>
+                                    <div class="cvv">
+                                        <h3>CVV</h3>
+                                        <div class="input-field">
+                                            <input type="password" placeholder="cvv" id="Cardcvv" required
+                                                maxlength="3">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="second-row">
+                                    <div class="card-number">
+                                        <h3>Card Number</h3>
+                                        <div class="input-field">
+                                            <input type="number" placeholder="your card number" id="Cardnumber" required
+                                                maxlength="16">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="third-row">
+                                    <h3>Date</h3>
+                                    <div class="selection">
+                                        <div class="date">
+                                            <select name="months" id="months">
+                                                <option value="Jan">Jan</option>
+                                                <option value="Feb">Feb</option>
+                                                <option value="Mar">March</option>
+                                                <option value="Apr">Apr</option>
+                                                <option value="May">May</option>
+                                                <option value="Jun">Jun</option>
+                                                <option value="Jul">Jul</option>
+                                                <option value="Aug">Aug</option>
+                                                <option value="Sep">Sep</option>
+                                                <option value="Oct">Oct</option>
+                                                <option value="Nov">Nov</option>
+                                                <option value="Dec">Dec</option>
+
+                                            </select>
+                                            <select name="years" id="years">
+                                                <option value="2021">2021</option>
+                                                <option value="2020">2020</option>
+                                                <option value="2019">2019</option>
+                                                <option value="2018">2018</option>
+                                                <option value="2017">2017</option>
+                                                <option value="2016">2016</option>
+                                            </select>
+                                        </div>
+                                        <div class="card-image">
+                                            <img src="../images/mc.png" alt=" " style="width:100px;" />
+                                            <img src="../images/vi.png" alt=" " style="width:100px;" />
+                                            <img src="../images/pp.png" alt=" " style="width:100px;" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <button id="btn" onclick="check()">Confirm</button>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+
+                <!-------------------Footer Area---------------------->
+                <%- include ("partials/footer.partials.ejs") %>
 </body>
+
 </html>
+
+<script src="/public/scripts/payment.js"></script>

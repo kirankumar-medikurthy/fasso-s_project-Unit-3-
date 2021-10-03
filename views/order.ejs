@@ -1,23 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Order</title>
+    <link rel="shortcut icon"
+    href="https://assets.faasos.io/order.faasos.io/production/app/public/images/faviconFaasos.png" />
+
     <link rel="stylesheet" href="css/bar.css">
     <link rel="stylesheet" href="css/userSection.css">
     <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="css/order.css">
 </head>
 
 <body>
     <!-------------------Top Bar---------------------->
     <%- include ("partials/navbar.partials.ejs") %>
-    <!-------------------login section details---------------------->
-    <%- include ("partials/loginSection.partials.ejs") %>
-    <!-------------------Link section details bar---------------------->
-    <%- include ("partials/link.partials.ejs") %>
-     <!-------------------Footer Area---------------------->
-    <%- include ("partials/footer.partials.ejs") %>
+        <!-------------------login section details---------------------->
+        <%- include ("partials/loginSection.partials.ejs") %>
+            <!-------------------Link section details bar---------------------->
+            <%- include ("partials/link.partials.ejs") %>
+            
+  <!-------------------Manage Profile---------------------->
+  <div id="showBar">
+    <div id="profilebox">
+      <h3 id="Mprofile">Live Orders</h3>
+      <div id="order-data"></div>
+
+      <div id="sucsess">
+
+      </div>
+    </div>
+  </div>
+              
+                <!-------------------Footer Area---------------------->
+                <%- include ("partials/footer.partials.ejs") %>
 </body>
+<script src="../public/scripts/order.script.js"></script>
+
 </html>
