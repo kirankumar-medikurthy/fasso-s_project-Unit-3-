@@ -1,0 +1,61 @@
+#prod {
+    border: 1px solid blue;
+    margin-left: 20%;
+    width: 50%;
+    height: 150px;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-top: 30px;
+}
+
+#prodImage {
+    width: 28%;
+    height: 100%;
+    float: left;
+    background-color: white;
+}
+
+#prodName {
+    float: left;
+    margin-bottom: 5px;
+    font-size: 17px;
+    padding-left: 10px;
+    background-color: white;
+    font-weight: 550;
+    color: rgb(51, 51, 51);
+}
+
+#proddesc {
+    float: left;
+    width: 70%;
+    font-size: 17px;
+    margin-bottom: 5px;
+    padding-left: 10px;
+    margin-top: 10px;
+    background-color: white;
+    font-weight: 550;
+    color: rgb(51, 51, 51);
+}
+
+#prodveg {
+    float: left;
+    font-size: 17px;
+    padding-left: 10px;
+    margin-bottom: 5px;
+    width: 70%;
+    background-color: white;
+    font-weight: 550;
+    color: rgb(51, 51, 51);
+}
+
+#prodPrice {
+    float: left;
+    width: 70%;
+    font-size: 17px;
+    padding-left: 10px;
+    margin-bottom: 5px;
+    background-color: white;
+    font-weight: 550;
+    color: rgb(51, 51, 51);
+}
