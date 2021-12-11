@@ -12,7 +12,7 @@
    * Kabi Gadal
    * Pooja Kumari
 
-# Team Members
+# Team Members Porfolios link:
    * Shihab Shaikh
    * Kiran Medikurthy
    * [Kabi Gadal](https://kabigadal.github.io/my/)
