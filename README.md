@@ -13,7 +13,7 @@
    * Pooja Kumari
 
 # Team Members Porfolios link:
-   * [Kabi Gadal](https://kabigadal.github.io/my/index)
+   * [Kabi Gadal](https://kabigadal.github.io/Final_Portfolio/)
 
 
 # Functionality
