@@ -12,6 +12,11 @@
    * Kabi Gadal
    * Pooja Kumari
 
+# Team Members
+   * Shihab Shaikh
+   * Kiran Medikurthy
+   * [Kabi Gadal](https://kabigadal.github.io/my/)
+   * Pooja Kumari
 
 
 # Functionality
